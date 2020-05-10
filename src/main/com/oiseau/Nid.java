@@ -29,10 +29,15 @@ public class Nid
     }
 
     public String habitat(int index){
-        if (isEmpty())
-            return ("nid en " + matiere);
-        else
-            return (this.getOiseau(index).getType() + " habite " + matiere);
+		if index < this.capacite{
+			if (isEmpty())
+				return ("nid en " + matiere);
+			else
+				return (this.getOiseau(index).getType() + " habite " + matiere);
+		}else{
+			throw new IndexOutOfBoundsException("l'index saisie dépasse la capacité");
+		}
+        
     }
 
     public boolean isEmpty() {
